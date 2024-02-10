@@ -1,0 +1,71 @@
+.footer {
+  background: #000;
+}
+
+.footer-container {
+  max-width: 1200px;
+  padding: 120px 20px 60px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.footer-texto {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  color: #cccccc;
+  position: relative;
+}
+
+.footer-texto::after {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  align-content: space-between;
+  background: url('../img/mao.svg') no-repeat center;
+  position: absolute;
+  left: 470px;
+  top: 35px;
+}
+
+.footer-contato li {
+  font-weight: bold;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.footer-contato li a {
+  color: #ffffff;
+}
+
+@media (max-width: 932px){
+  .footer-texto::after {
+    position: absolute;
+    left: 500px;
+    top: 100px;
+  }
+}
+
+@media (max-width: 667px){
+  .footer-texto::after {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+  }
+}
+
+@media (max-width: 800px){ 
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .footer-contato li {
+    font-size: 1.5rem;
+  }
+}
